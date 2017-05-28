@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="607b4e89-9911-4143-88c7-625c45c1394c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo_project/src/Controller/TodoController.php" afterPath="$PROJECT_DIR$/todo_project/src/Controller/TodoController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo_project/src/Template/Layout/todo.ctp" afterPath="$PROJECT_DIR$/todo_project/src/Template/Layout/todo.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo_project/src/Template/Todo/index.ctp" afterPath="$PROJECT_DIR$/todo_project/src/Template/Todo/index.ctp" />
-    </list>
+    <list default="true" id="607b4e89-9911-4143-88c7-625c45c1394c" name="Default" comment="" />
     <ignored path="todo_application.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -121,7 +116,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="262" />
+    <option name="x" value="632" />
+    <option name="y" value="765" />
     <option name="width" value="1208" />
     <option name="height" value="1026" />
   </component>
@@ -340,15 +336,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495904596785</updated>
-      <workItem from="1495904600774" duration="5645000" />
+      <workItem from="1495904600774" duration="5980000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5645000" />
+    <option name="totallyTimeSpent" value="5980000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="262" y="0" width="1208" height="1026" extended-state="0" />
+    <frame x="632" y="765" width="1208" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20084034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
