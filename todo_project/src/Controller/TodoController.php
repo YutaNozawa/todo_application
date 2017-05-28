@@ -14,9 +14,6 @@ class TodoController extends AppController
 {
     public function index()
     {
-        $this->autoRender = false;
-
-
     }
     //エスケープ処理
     private function h($s)
