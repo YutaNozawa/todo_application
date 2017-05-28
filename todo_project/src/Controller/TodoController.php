@@ -14,7 +14,9 @@ class TodoController extends AppController
 {
     public function index()
     {
-        $this->viewBuilder()->setLayout('todo');
+        $this->autoRender = false;
+
+
     }
     //エスケープ処理
     private function h($s)
