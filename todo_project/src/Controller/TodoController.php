@@ -9,11 +9,13 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 class TodoController extends AppController
 {
     public function index()
     {
+        $todos = TableRegistry::get('Todos')->getByData();
     }
     //エスケープ処理
     private function h($s)
