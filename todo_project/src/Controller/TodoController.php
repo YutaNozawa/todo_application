@@ -9,13 +9,19 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Database\Exception;
 use Cake\ORM\TableRegistry;
 
 class TodoController extends AppController
 {
     public function index()
     {
-        $todos = TableRegistry::get('Todos')->getByData();
+        try {
+            $todos = TableRegistry::get('Todos')->getByData();
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            exit;
+        }
     }
     //エスケープ処理
     private function h($s)
