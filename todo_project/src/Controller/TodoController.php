@@ -17,7 +17,10 @@ class TodoController extends AppController
     public function index()
     {
         try {
-            $todos = TableRegistry::get('Todos')->getByData();
+            $todos = TableRegistry::get('Todos')->getByAllData();
+
+
+            $this->set('todos', $todos);
         } catch (Exception $e) {
             echo $e->getMessage();
             exit;
