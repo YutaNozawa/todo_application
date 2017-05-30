@@ -13,18 +13,18 @@
             <?= $this->Form->text('text',['id' => "new_todo", 'placeholder' => "what needs to be done?"]); ?>
         </div>
 
-            <ul>
+            <ul id="#todos">
+                <?php foreach($todos as $todo): ?>
                 <li>
-                    <?= $this->Form->checkbox('check1',['id' => 'check1']); ?>
-                    <span>Do something</span>
+                    <?= $this->Form->checkbox('check1',['class' => 'update_todo', 'checked' => $todo->state == 1]); ?>
+                    <span class="<?php if ($todo->state == 1) { echo "done"; } ?>"><?= h($todo->title); ?></span>
                     <div class="delete_todo">x</div>
                 </li>
-                <li>
-                    <?= $this->Form->checkbox('check2',['id' => 'check2']); ?>
-                    <span class="done">Do something again!</span>
-                    <div class="delete_todo">x</div>
-                </li>
+                <?php endforeach; ?>
+
                 <?= $this->Form->end(); ?>
             </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="todo.js"></script
     </body>
 </html>
