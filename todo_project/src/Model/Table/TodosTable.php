@@ -56,9 +56,10 @@ class TodosTable extends Table
 
         return $validator;
     }
-    public function getByData() {
+    public function getByAllData() {
 
         return $this->find('all')->
+            orderDesc('id')->
             toArray();
     }
 }
