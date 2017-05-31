@@ -15,9 +15,9 @@
 
             <ul id="#todos">
                 <?php foreach($todos as $todo): ?>
-                <li>
+                <li id="todo_<?= h($todo->id); ?>" data-id="<?= h($todo->id) ?>">
                     <?= $this->Form->checkbox('check1',['class' => 'update_todo', 'checked' => $todo->state == 1]); ?>
-                    <span class="<?php if ($todo->state == 1) { echo "done"; } ?>"><?= h($todo->title); ?></span>
+                    <span class="todo_title <?php if ($todo->state == 1) { echo "done"; } ?>"><?= h($todo->title); ?></span>
                     <div class="delete_todo">x</div>
                 </li>
                 <?php endforeach; ?>
@@ -25,6 +25,6 @@
                 <?= $this->Form->end(); ?>
             </ul>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="todo.js"></script
+    <script src="todo.js"></script>
     </body>
 </html>
