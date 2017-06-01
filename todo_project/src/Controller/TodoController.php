@@ -18,7 +18,6 @@ class TodoController extends AppController
     {
         try {
             $todos = TableRegistry::get('Todos')->getByAllData();
-            _ajax();
             $this->set('todos', $todos);
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -48,5 +47,56 @@ class TodoController extends AppController
                 exit;
             }
         }
+    }
+    public function post()
+    {
+        if (!isset($this->request->getData('mode'))) {
+            throw new \Cake\Core\Exception\Exception('mode not set');
+        }
+
+        $mode = $this->request->getData('mode');
+
+        if ($mode == 'update') {
+            $this->_update();
+        }
+
+        if ($mode == 'create') {
+            $this->_create();
+        }
+
+        if ($mode == 'delete') {
+            $this->_delete();
+        }
+
+    }
+
+    private function _update()
+    {
+        if (!isset($this->request->getData('id'))) {
+            throw new \Cake\Core\Exception\Exception('[update] id not set');
+        }
+
+        $todosTable = TableRegistry::get('Todos');
+
+        $todo = $todosTable->get($this->request->getData('id'));
+
+        $todo->state = ($todo->state + 1) % 2;
+
+        $todosTable->patchEntity($todo, $todo->state);
+
+        $todosTable->save($todo);
+
+        return [
+            'state' => $todo->state
+        ];
+
+    }
+    private function _create()
+    {
+
+    }
+    private function _delete()
+    {
+
     }
 }
